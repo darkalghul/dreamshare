@@ -14,15 +14,8 @@
 
 // 3. Layout-related sections
 @import
-"layout/header",
-"layout/login",
-"layout/sidebar";
+"layout/header";
 
 // 4. Components
 @import
-"components/button",
-"components/checkbox";
-
-// 5. Page-specific styles
-@import
-"content/cards";
+"components/button";

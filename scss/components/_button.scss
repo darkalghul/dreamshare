@@ -1,11 +1,10 @@
 .btn {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .btn-general {
     font-family: $secondary-font;
-    @include button-gradient($primary-color, $secondary-color);
-    background-color: transparent;
+    background-color: $btn-color;
     color: $white;
     padding: 13px 12px;
     text-transform: capitalize;
@@ -20,8 +19,7 @@
     transition: all 0.5s ease;
 
     @include on-event {
-        background-position: right center;
-        background-color: transparent;
+        background-color: $hover-color;
         text-decoration: none;
         color: $white;
         border: none;

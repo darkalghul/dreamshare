@@ -1,27 +1,28 @@
-$primary-font: "Nunito Sans", sans-serif;
-$secondary-font: "Roboto", sans-serif;
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
 
 $text-color: #858796 !default;
 
 // Base Colors
 $white: #FFF;
 $black: #000;
-$grey: #C7C7C7;
-$grey-divider: #CCC;
+$darker-grey: #444;
+$brownish-grey: #666;
+$light-grey: #F7F3F2;
+$light-pink: #E3E3E3;
 $wrongurl-color: #EEE;
 
 // Pallete Colors
-$primary-color: #038DCD;
-$secondary-color: #3A3C93;
-$primary-alert: #1CC88A;
-$secondary-alert: #F6C23E;
-$third-alert: #E74A3B;
-$fourth-alert: #4E73DF;
+$primary-color: #FF4E50;
+$secondary-color: #667DF3;
+$aqua-color: #19D4CA;
+$yellowish-color: #FFA710;
+
 
 // Configuration Colors
-$body-color: #F8F9FC;
-$btn-color: $secondary-color;
+$body-color: $white;
+$btn-color: $primary-color;
 $hover-color: $secondary-color;
 
 // Base path for assets (fonts, images...)
-$asset-base-path: ".." !default;
+$asset-base-path: "../assets" !default;

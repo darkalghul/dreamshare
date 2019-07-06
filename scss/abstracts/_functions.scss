@@ -11,7 +11,7 @@
 // @return {URL} - A `url()` function leading to the image
 // @require {function} asset
 @function image($file) {
-    @return asset("images", $file);
+    @return asset("img", $file);
 }
 
 // Font asset helper
