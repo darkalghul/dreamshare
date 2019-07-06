@@ -6,7 +6,7 @@
     font-family: $secondary-font;
     background-color: $btn-color;
     color: $white;
-    padding: 10px 15px;
+    padding: 12px 15px;
     text-transform: capitalize;
     text-align: center;
     border: none;
@@ -25,17 +25,6 @@
         border: none;
         -webkit-box-shadow: none;
         box-shadow: none;
-    }
-
-    &:not(:disabled):not(.disabled):active,
-    &:not(:disabled):not(.disabled).active {
-        -webkit-box-shadow: none;
-        box-shadow: none;
-
-        &:focus {
-            -webkit-box-shadow: none;
-            box-shadow: none;
-        }
     }
 }
 
