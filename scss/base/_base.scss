@@ -1,0 +1,44 @@
+html {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background-color: $body-color;
+    font-family: $primary-font;
+    color: $text-color;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
+}
+
+#wrapper { height: 100%; }
+
+.dash-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+h1, h2, h3, h4, h5 {
+    color: $primary-color;
+    text-transform: none;
+}
+
+p {
+    color: $text-color;
+    word-wrap: break-word;
+}
+
+a {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: $primary-color;
+    text-decoration: none;
+    
+    @include on-event {
+        text-decoration: underline;
+        color: $hover-color;
+    }
+}

@@ -1,0 +1,127 @@
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.hide-text {
+    overflow: hidden;
+    padding: 0;
+    text-indent: 101%;
+    white-space: nowrap;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.link-center {
+    text-align: center;
+}
+
+.no-link {
+    cursor: default;
+    pointer-events: none;
+}
+
+.full-wd {
+    width: 100%;
+}
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.text-white {
+    color: $white;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.no-break {
+    white-space: nowrap;
+}
+
+.b-left-progress-alert {
+    border-left: 5px solid #F6C23E;
+}
+
+.b-left-finish-alert {
+    border-left: 5px solid #1CC88A;
+}
+
+.b-left-expire-alert {
+    border-left: 5px solid #E74A3B;
+}
+
+.b-left-cancel-alert {
+    border-left: 5px solid #4E73DF;
+}
+
+.progress-alert {
+    background-color: #F6C23E;
+}
+
+.finish-alert {
+    background-color: #1CC88A;
+}
+
+.expire-alert {
+    background-color: #E74A3B;
+}
+
+.cancel-alert {
+    background-color: #4E73DF;
+}
+
+.type-alert-progress {
+    color: #F6C23E;
+}
+
+.type-alert-finish {
+    color: #1CC88A;
+}
+
+.type-alert-expire {
+    color: #E74A3B;
+}
+
+.type-alert-cancel {
+    color: #4E73DF;
+}
+
+@-webkit-keyframes growIn {
+    0% {
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes growIn {
+    0% {
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}

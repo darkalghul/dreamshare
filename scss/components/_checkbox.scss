@@ -1,0 +1,79 @@
+.checkbox {
+    padding-left: 8px; //Edit according the desire alignment
+
+    label {
+        font-size: 17px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding-left: 5px;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            left: 0;
+            bottom: 4px;
+            margin-left: -20px;
+            border: 1px solid $grey-divider;
+            border-radius: 3px;
+            background-color: $white;
+            -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+            transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+        }
+
+        &:after {
+            display: inline-block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 0;
+            margin-left: -20px;
+            padding-left: 3px;
+            padding-top: 1px;
+            font-size: 11px;
+            color: #555555;
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        opacity: 0;
+        z-index: 1;
+
+        &:focus {
+            // Undo comment if you want to style the outline of the checkbox
+            + label:before {
+                // outline: 5px auto -webkit-focus-ring-color;
+                // outline-offset: -2px;
+            }
+        }
+        &:checked {
+            + label {
+                &:before {
+                    background-color: $secondary-color;
+                    outline: 1px auto;
+                    outline-color: $grey-divider;
+                    border: 3px solid $white;
+                }
+
+                &:after {
+                    //Use it if you want to add a FontAwesome check or a custom check symbol
+                }
+            }
+        }
+        &:disabled {
+            + label {
+                opacity: 0.65;
+
+                &:before {
+                    background-color: $wrongurl-color;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}

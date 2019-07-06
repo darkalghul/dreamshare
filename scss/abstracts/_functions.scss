@@ -1,0 +1,39 @@
+// Asset URL builder
+// @param {String} $folder - Asset folder, matching folder name
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the asset
+@function asset($folder, $file) {
+    @return url($asset-base-path + "/" + $folder + "/" + $file);
+}
+
+// Image asset helper
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the image
+// @require {function} asset
+@function image($file) {
+    @return asset("images", $file);
+}
+
+// Font asset helper
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the font
+// @require {function} asset
+@function font($font_folder, $file) {
+    @return asset("fonts/#{$font_folder}", $file);
+}
+
+// Slightly lighten a color
+// @param {Color} $color - color to tint
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+// Slightly darken a color
+// @param {Color} $color - color to shade
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}

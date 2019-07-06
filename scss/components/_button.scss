@@ -1,0 +1,46 @@
+.btn {
+    font-size: 16px;
+}
+
+.btn-general {
+    font-family: $secondary-font;
+    @include button-gradient($primary-color, $secondary-color);
+    background-color: transparent;
+    color: $white;
+    padding: 13px 12px;
+    text-transform: capitalize;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    font-weight: normal;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    outline: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    @include on-event {
+        background-position: right center;
+        background-color: transparent;
+        text-decoration: none;
+        color: $white;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+
+        &:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.btn-primary, .btn-default {
+    @extend .btn-general;
+}

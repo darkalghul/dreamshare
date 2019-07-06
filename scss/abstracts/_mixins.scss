@@ -1,0 +1,80 @@
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+@mixin when-inside($context) {
+    #{$context} & {
+        @content;
+    }
+}
+
+@mixin linear-gradient-vertical($initial, $final) {
+    background: $initial;
+    background: -webkit-gradient(linear, left top, left bottom, from($initial), to($final));
+    background: linear-gradient(180deg, $initial 0%, $final 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$initial}', endColorstr='#{$final}', GradientType=0);
+}
+
+@mixin linear-gradient-horizontal($initial, $final) {
+    background: $initial;
+    background: -webkit-gradient(linear, left top, right top, from($initial), to($final));
+    background: linear-gradient(90deg, $initial, $final);
+    filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$initial}', end-colourStr='#{$final}', gradientType='1');
+}
+
+@mixin button-gradient($initial, $final) {
+    background-image: -webkit-gradient(linear, left top, right top, from($initial), to($final));
+    background-image: linear-gradient(to right, $initial, $final);
+}
+
+@mixin contrast($percent) {
+    filter: contrast($percent);
+    -webkit-filter: contrast($percent);
+    -moz-filter: contrast($percent);
+    -o-filter: contrast($percent);
+    -ms-filter: contrast($percent);
+}
+
+@mixin saturation($percent) {
+    filter: saturate($percent);
+    -webkit-filter: saturate($percent);
+    -moz-filter: saturate($percent);
+    -o-filter: saturate($percent);
+    -ms-filter: saturate($percent);
+}
+
+@mixin brightness($percent) {
+    filter: brightness($percent);
+    -webkit-filter: brightness($percent);
+    -moz-filter: brightness($percent);
+    -o-filter: brightness($percent);
+    -ms-filter: brightness($percent);
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}

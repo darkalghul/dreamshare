@@ -1,0 +1,399 @@
+.sidebar {
+    width: 6.5rem;
+    min-height: 100vh;
+    @include linear-gradient-vertical($primary-color, $secondary-color);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+    hr {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        margin: 0 1rem 1rem;
+    }
+
+    .sidebar-brand {
+        color: $white;
+
+        img {
+            width: 2.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        @include on-event {
+            text-decoration: none;
+        }
+    }
+
+    .accordion {
+        .card {
+            background-color: transparent;
+            border: none;
+            border-radius: 0px;
+        }
+
+        .card-header {
+            padding: 12px 16px;
+            background-color: transparent;
+            border: none;
+            border-radius: 0px;
+
+            .btn-link {
+                position: relative;
+                padding: 0rem;
+                width: 100%;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.8);
+
+                .fas {
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    display: none;
+                }
+
+                @include on-event {
+                    color: $white;
+                    text-decoration: none;
+
+                    &.isClose:after, &.isOpen:after {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .collapse, .collapsing {
+            position: relative;
+            left: 0px;
+            z-index: 1;
+            top: 0px;
+            -webkit-animation-name: growIn;
+                    animation-name: growIn;
+            -webkit-animation-duration: 0.2s;
+                    animation-duration: 0.2s;
+            -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
+                    animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
+
+            .collapse-inner {
+                background-color: transparent;
+                padding-left: 0.5rem;
+                font-size: 16px;
+                margin-bottom: 16px;
+
+                .collapse-item {
+                    display: block;
+                    padding: 0.5rem 1rem;
+                    color: #333333;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    text-align: center;
+                    background-color: $body-color;
+
+                    .fas {
+                        width: 15px;
+                        height: 12.8px;
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 24px;
+                    }
+
+                    &:last-child {
+                        border-bottom-left-radius: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-item {
+        position: relative;
+
+        .nav-link {
+            position: relative;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 12px 16px;
+            width: 6.5rem;
+            width: 100%;
+
+            .fas {
+                font-size: 1.5rem;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        &.active {
+            .nav-link {
+                color: $white;
+            }
+        }
+
+        .collapse, .collapsing {
+            position: relative;
+            left: 0px;
+            z-index: 1;
+            top: 0px;
+            -webkit-animation-name: growIn;
+                    animation-name: growIn;
+            -webkit-animation-duration: 0.2s;
+                    animation-duration: 0.2s;
+            -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
+                    animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
+
+            .collapse-inner {
+                background-color: transparent;
+                padding-left: 0.5rem;
+                // padding-top: 0.5rem;
+                // padding-bottom: 0.5rem;
+                font-size: 16px;
+                margin-bottom: 16px;
+
+                .collapse-item {
+                    padding: 0.5rem 1rem;
+                    // margin-left: 0.5rem;
+                    // margin-right: 0.5rem;
+                    display: block;
+                    color: #333333;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    text-align: center;
+                    background-color: $body-color;
+
+                    &:first-child {
+                        border-top-left-radius: 24px;
+                    }
+
+                    &:last-child {
+                        border-bottom-left-radius: 24px;
+                    }
+
+                    > span {
+                        display: none;
+                    }
+
+                    // &:hover {
+                    //     background-color: #D1D3E2;
+                    // }
+                }
+            }
+        }
+    }
+
+    &.toggled {
+        margin-left: -6.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 16rem;
+
+        .sidebar-brand {
+            img {
+                margin-right: 0.5rem;
+            }
+        }
+
+        .accordion {
+            .card-header {
+                padding: 1rem;
+                position: relative;
+
+                .btn-link {
+                    display: block;
+                    text-align: left;
+
+                    .fas {
+                        font-size: 0.7rem;
+                        margin-right: 0.25rem;
+                    }
+
+                    span {
+                        font-size: 0.7rem;
+                        display: inline;
+                    }
+                }
+
+                &.isClose:after {
+                    content: '\f105';
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    color: rgba(255, 255, 255, 0.8);
+                    width: 1rem;
+                    height: 1.5rem;
+                    border: 0px;
+                    font-weight: 900;
+                    font-family: 'Font Awesome 5 Free';
+                    -webkit-transition: ease 0.5s;
+                    transition: ease 0.5s;
+                }
+
+                &.isOpen:after {
+                    content: '\f105';
+                    position: absolute;
+                    top: 1.3rem;
+                    right: 1rem;
+                    color: rgba(255, 255, 255, 0.8);
+                    width: 1rem;
+                    height: 1.5rem;
+                    font-weight: 900;
+                    font-family: 'Font Awesome 5 Free';
+                    -webkit-transition: ease 0.5s;
+                    transition: ease 0.5s;
+                    -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+
+            .collapse, .collapsing {
+                -webkit-animation: none;
+                        animation: none;
+
+                .collapse-inner {
+                    font-size: 13px;
+
+                    .collapse-item {
+                        padding: 0.7rem 1rem;
+                        text-align: left;
+
+                        span {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-item {
+            .nav-link {
+                display: block;
+                text-align: left;
+                padding: 1rem;
+
+                .fas {
+                    font-size: 0.7rem;
+                    margin-right: 0.25rem;
+                }
+
+                span {
+                    font-size: 0.7rem;
+                    display: inline;
+                }
+            }
+
+            .nav-link[data-toggle=collapse] {
+                &:after {
+                    color: rgba(255, 255, 255, 0.8);
+                    width: 1rem;
+                    text-align: center;
+                    float: right;
+                    vertical-align: 0;
+                    border: 0px;
+                    font-weight: 900;
+                    content: '\f107';
+                    font-family: 'Font Awesome 5 Free';
+                }
+
+                &.collapsed {
+                    &:after {
+                        content: '\f105';
+                    }
+                }
+            }
+
+            .collapse, .collapsing {
+                position: relative;
+                left: 0px;
+                z-index: 1;
+                top: 0px;
+                -webkit-animation: none;
+                        animation: none;
+
+                .collapse-inner {
+                    font-size: 13px;
+
+                    .collapse-item {
+                        text-align: left;
+                        padding: 0.7rem 1rem;
+
+                        > span {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.toggled {
+            margin-left: 0rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        .accordion {
+            .card-header {
+                .btn-link {
+                    .fas {
+                        font-size: 0.8rem;
+                    }
+
+                    span {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+        .nav-item {
+            .nav-link {
+                .fas {
+                    font-size: 0.8rem;
+                }
+
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .sidebar {
+        .accordion {
+            .card-header {
+                .btn-link {
+                    .fas {
+                        font-size: 0.85rem;
+                    }
+
+                    span {
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+        .nav-item {
+            .nav-link {
+                .fas {
+                    font-size: 0.85rem;
+                }
+
+                span {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+}

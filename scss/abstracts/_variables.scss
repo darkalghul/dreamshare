@@ -1,0 +1,27 @@
+$primary-font: "Nunito Sans", sans-serif;
+$secondary-font: "Roboto", sans-serif;
+
+$text-color: #858796 !default;
+
+// Base Colors
+$white: #FFF;
+$black: #000;
+$grey: #C7C7C7;
+$grey-divider: #CCC;
+$wrongurl-color: #EEE;
+
+// Pallete Colors
+$primary-color: #038DCD;
+$secondary-color: #3A3C93;
+$primary-alert: #1CC88A;
+$secondary-alert: #F6C23E;
+$third-alert: #E74A3B;
+$fourth-alert: #4E73DF;
+
+// Configuration Colors
+$body-color: #F8F9FC;
+$btn-color: $secondary-color;
+$hover-color: $secondary-color;
+
+// Base path for assets (fonts, images...)
+$asset-base-path: ".." !default;

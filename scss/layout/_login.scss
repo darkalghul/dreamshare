@@ -1,0 +1,75 @@
+.login-screen {
+    font-family: $secondary-font;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.35)), to(rgba(0, 0, 0, 0.35))), url('../../../../public/assets/banner.jpg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../../../../public/assets/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    position: relative;
+
+    .container, .row {
+        height: 100%;
+    }
+
+    .img-fluid {
+        width: 170px;
+    }
+
+    h1 {
+        color: $white;
+        text-align: center;
+        margin-bottom: 45px;
+        margin-top: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+
+        &:nth-child(2) {
+            margin-bottom: 15px;
+        }
+    }
+
+    .input-group-prepend {
+        margin-right: 0px;
+    }
+
+    .input-group-text {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $grey;
+        border: 0px;
+        border-radius: 15px;
+        padding: 17px 4px 17px 20px;
+    }
+
+    .form-control {
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $grey;
+        border: 0px;
+        border-radius: 15px;
+        padding: 16px 12px;
+
+        @include on-event {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    .link {
+        text-align: center;
+
+        > a { color: $white; }
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .login-screen {
+        .link { text-align: right; }
+    }
+}
