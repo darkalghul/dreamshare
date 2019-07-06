@@ -1,0 +1,71 @@
+.banner {
+    position: relative;
+    background: linear-gradient(180deg, rgba(249, 212, 35, 0.1), rgba(255, 78, 80, 0.1)), image('backgroundBitmap.png');
+    background-color: $black;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 540px;
+
+    .caption {
+        position: absolute;
+        text-align: center;
+        top: 180px;
+        left: 0px;
+        right: 0px;
+
+        p {
+            font-family: $secondary-font;
+            font-weight: bold;
+            font-size: 20px;
+            color: $white;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: $secondary-font;
+            font-weight: bold;
+            font-size: 30px;
+            color: $white;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: $white;
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 0px;
+            margin-bottom: 18px;
+        }
+
+        a {
+            width: 280px;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .banner {
+        height: 700px;
+
+        .caption {
+            top: 200px;
+
+            h1 {
+                font-size: 52px;
+            }
+
+            h3 {
+                font-size: 24px;
+                margin-bottom: 32px;
+            }
+
+            a {
+                width: 225px;
+            }
+        }
+    }
+}
