@@ -226,6 +226,77 @@
     }
 }
 
+.activity-ideas {
+    padding-top: 35px;
+
+    h2 {
+        font-family: $secondary-font;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        color: $darker-grey;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    .flex-container {
+        .items {
+            position: relative;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 120px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+
+            .valign {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+
+                h2 {
+                    color: $white;
+                    margin-bottom: 0px;
+                }
+            }
+
+            &.sports {
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image('Sports.png');
+            }
+
+            &.health {
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image('Wellness.png');
+            }
+
+            &.expeditions {
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image('Extreme.png');
+            }
+
+            &.games {
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image('Games.png');
+            }
+
+            &.culture {
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image('Culture2.png');
+            }
+
+            &.relaxation {
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image('enjoymentRelaxation.png');
+            }
+
+            &.traveling {
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image('Traveling.png');
+            }
+        }
+
+        &:last-child {
+            .items:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
 @media(min-width: 768px) {
     .banner {
         height: 700px;
@@ -311,6 +382,46 @@
             width: 180px;
         }
     }
+
+    .activity-ideas {
+        padding-top: 95px;
+
+        h2 {
+            margin-bottom: 34px;
+        }
+
+        .flex-container {
+            .items {
+                flex-grow: 1;
+                height: 310px;
+                max-width: 236px;
+                margin-bottom: 1.25rem;
+
+                &.health {
+                    margin-left: 1.25rem;
+                    margin-right: 1.25rem;
+                }
+
+                &.culture {
+                    margin-left: 1.25rem;
+                }
+
+                &.relaxation {
+                    margin-right: 1.25rem;
+                }
+
+                &.culture, &.relaxation {
+                    max-width: none;
+                }
+            }
+
+            &:last-child {
+                .items {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 @media(min-width: 1200px) {
@@ -360,6 +471,14 @@
                 .img-container:after {
                     left: 138px;
                 }
+            }
+        }
+    }
+
+    .activity-ideas {
+        .flex-container {
+            .items {
+                max-width: 300px;
             }
         }
     }

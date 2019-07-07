@@ -448,6 +448,48 @@ a {
       background-color: #FF4E50;
       color: #FFF; }
 
+.activity-ideas {
+  padding-top: 35px; }
+  .activity-ideas h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    color: #444;
+    margin-top: 0px;
+    margin-bottom: 15px; }
+  .activity-ideas .flex-container .items {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 4px; }
+    .activity-ideas .flex-container .items .valign {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+      .activity-ideas .flex-container .items .valign h2 {
+        color: #FFF;
+        margin-bottom: 0px; }
+    .activity-ideas .flex-container .items.sports {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Sports.png"); }
+    .activity-ideas .flex-container .items.health {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Wellness.png"); }
+    .activity-ideas .flex-container .items.expeditions {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Extreme.png"); }
+    .activity-ideas .flex-container .items.games {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Games.png"); }
+    .activity-ideas .flex-container .items.culture {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Culture2.png"); }
+    .activity-ideas .flex-container .items.relaxation {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/enjoymentRelaxation.png"); }
+    .activity-ideas .flex-container .items.traveling {
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Traveling.png"); }
+  .activity-ideas .flex-container:last-child .items:last-child {
+    margin-bottom: 0px; }
+
 @media (min-width: 768px) {
   .banner {
     height: 700px; }
@@ -495,7 +537,28 @@ a {
         .partners .flex-container .items .img-container:after {
           left: 141px; }
     .partners .btn {
-      width: 180px; } }
+      width: 180px; }
+
+  .activity-ideas {
+    padding-top: 95px; }
+    .activity-ideas h2 {
+      margin-bottom: 34px; }
+    .activity-ideas .flex-container .items {
+      flex-grow: 1;
+      height: 310px;
+      max-width: 236px;
+      margin-bottom: 1.25rem; }
+      .activity-ideas .flex-container .items.health {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem; }
+      .activity-ideas .flex-container .items.culture {
+        margin-left: 1.25rem; }
+      .activity-ideas .flex-container .items.relaxation {
+        margin-right: 1.25rem; }
+      .activity-ideas .flex-container .items.culture, .activity-ideas .flex-container .items.relaxation {
+        max-width: none; }
+    .activity-ideas .flex-container:last-child .items {
+      margin-bottom: 0; } }
 @media (min-width: 1200px) {
   .how-it-works .items {
     background-position: center center; }
@@ -518,6 +581,9 @@ a {
         left: 112px; } }
 @media (min-width: 1440px) {
   .partners .flex-container .items .img-container:after {
-    left: 138px; } }
+    left: 138px; }
+
+  .activity-ideas .flex-container .items {
+    max-width: 300px; } }
 
 /*# sourceMappingURL=main.css.map */
