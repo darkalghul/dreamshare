@@ -1,0 +1,106 @@
+footer {
+    border-top: 2px solid $primary-color;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    .flex-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        .items {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            text-align: center;
+
+            p {
+                font-family: $secondary-font;
+                font-weight: bold;
+                font-size: 0.875rem;
+                color: $darker-grey;
+                margin-bottom: 0.3125rem;
+                margin-top: 0;
+
+                &.link {
+                    color: $primary-color;
+                    font-weight: normal;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    margin-bottom: 0.9375rem;
+
+                    a {
+                        @include on-event {
+                            color: $primary-color;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                small {
+                    text-transform: uppercase;
+                    color: #CCC;
+                    font-size: 0.625rem;
+                    margin-top: 0.9375rem;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+                margin-top: 0;
+                margin-bottom: 0.9375rem;
+
+                li {
+                    display: inline-block;
+                    padding: 0 0.3125rem;
+                    line-height: 1.8;
+
+                    > a {
+                        font-size: 0.875rem;
+                        font-weight: 300;
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    footer {
+        .flex-container {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+
+            .items {
+                text-align: left;
+
+                p.text-right {
+                    text-align: right;
+                }
+
+                ul {
+                    li {
+                        display: block;
+                        padding: 0;
+                    }
+                }
+
+                img {
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

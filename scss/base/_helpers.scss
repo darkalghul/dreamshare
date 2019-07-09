@@ -125,3 +125,50 @@
         opacity: 1
     }
 }
+
+@keyframes move {
+    0% {
+        opacity: 1;
+        left: -370px;
+    }
+    10% {
+        opacity: 1;
+        left: -333px;
+    }
+    20% {
+        opacity: 1;
+        left: -296px;
+    }
+    30% {
+        opacity: 1;
+        left: -259px;
+    }
+    40% {
+        opacity: 1;
+        left: -222px;
+    }
+    50% {
+        opacity: 1;
+        left: -185px;
+    }
+    60% {
+        opacity: 1;
+        left: -148px;
+    }
+    70% {
+        opacity: 1;
+        left: -111px;
+    }
+    80% {
+        opacity: 1;
+        left: -74px;
+    }
+    90% {
+        opacity: 1;
+        left: -37px;
+    }
+    100% {
+        opacity: 1;
+        left: 0px;
+    }
+}

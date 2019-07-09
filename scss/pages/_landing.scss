@@ -25,6 +25,8 @@
         }
 
         h1 {
+            position: relative;
+            opacity: 0;
             font-family: $secondary-font;
             font-weight: bold;
             font-size: 1.875rem;
@@ -32,6 +34,14 @@
             margin-top: 2.1875rem;
             margin-bottom: 0.75rem;
             text-transform: uppercase;
+            -webkit-animation: move 0.3s;
+            animation: move 0.3s;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
         }
 
         h2 {
@@ -40,11 +50,20 @@
             font-weight: 300;
             margin-top: 0px;
             margin-bottom: 1.125rem;
+            -webkit-animation: move 0.3s;
+            animation: move 0.3s;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
         }
 
         a {
             display: inline-block;
             width: 280px;
+            text-align: left;
         }
     }
 }
@@ -69,8 +88,8 @@
             background-repeat: no-repeat;
             background-size: cover;
             -webkit-box-flex: 1;
-                -ms-flex-positive: 1;
-                    flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
             height: 240px;
             border-radius: 4px;
 
@@ -143,8 +162,8 @@
     .flex-container {
         .items {
             -webkit-box-flex: 1;
-                -ms-flex-positive: 1;
-                    flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
             margin-bottom: 1rem;
 
             &.first { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
@@ -228,6 +247,7 @@
         border: 2px solid $primary-color;
         color: $primary-color;
         width: 280px;
+        text-align: left;
 
         @include on-event {
             background-color: $primary-color;
@@ -263,7 +283,7 @@
                 position: relative;
                 top: 50%;
                 -webkit-transform: translateY(-50%);
-                        transform: translateY(-50%);
+                transform: translateY(-50%);
 
                 h2 {
                     color: $white;
@@ -304,6 +324,7 @@
             &.traveling {
                 background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), image('Traveling.png');
                 background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image('Traveling.png');
+                background-position: top 10% center;
             }
         }
 
@@ -339,11 +360,11 @@
 
     .flex-container {
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-                -webkit-box-pack: center;
-                    -ms-flex-pack: center;
-                        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
 
         .form-container {
             form {
@@ -393,6 +414,7 @@
 
             a {
                 width: 225px;
+                text-align: center;
             }
         }
     }
@@ -425,13 +447,13 @@
 
         .flex-container {
             -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+            flex-wrap: wrap;
             max-width: 492px;
             margin: auto;
 
             .items {
                 -ms-flex-preferred-size: 45%;
-                    flex-basis: 45%;
+                flex-basis: 45%;
                 margin-bottom: 1rem;
                 margin-left: 0.625rem;
                 margin-right: 0.625rem;
@@ -456,6 +478,7 @@
 
         .btn {
             width: 180px;
+            text-align: center;
         }
     }
 
@@ -469,8 +492,8 @@
         .flex-container {
             .items {
                 -webkit-box-flex: 1;
-                    -ms-flex-positive: 1;
-                        flex-grow: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
                 height: 310px;
                 max-width: 236px;
                 margin-bottom: 1.25rem;
@@ -552,12 +575,12 @@
     .partners {
         .flex-container {
             -ms-flex-wrap: nowrap;
-                flex-wrap: nowrap;
+            flex-wrap: nowrap;
             max-width: none;
 
             .items {
                 -ms-flex-preferred-size: 100%;
-                    flex-basis: 100%;
+                flex-basis: 100%;
                 margin-bottom: 0;
 
                 &.second { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3 }
