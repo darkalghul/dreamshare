@@ -301,38 +301,38 @@ a {
     .banner .caption p {
       font-family: "Montserrat", sans-serif;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 1.25rem;
       color: #FFF;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       text-transform: uppercase; }
     .banner .caption h1 {
       font-family: "Montserrat", sans-serif;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 1.875rem;
       color: #FFF;
-      margin-top: 35px;
-      margin-bottom: 12px;
+      margin-top: 2.1875rem;
+      margin-bottom: 0.75rem;
       text-transform: uppercase; }
     .banner .caption h2 {
       color: #FFF;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 300;
       margin-top: 0px;
-      margin-bottom: 18px; }
+      margin-bottom: 1.125rem; }
     .banner .caption a {
       display: inline-block;
       width: 280px; }
 
 .how-it-works {
-  padding-top: 35px; }
+  padding-top: 2.1875rem; }
   .how-it-works h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.375rem;
     text-align: center;
     color: #444;
     margin-top: 0px;
-    margin-bottom: 15px; }
+    margin-bottom: 0.9375rem; }
   .how-it-works .flex-container .items {
     position: relative;
     background-position: center center;
@@ -349,7 +349,7 @@ a {
     .how-it-works .flex-container .items.s-step {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6))), url("../assets/img/Step2.png");
       background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("../assets/img/Step2.png");
-      margin: 10px 0px; }
+      margin: 0.625rem 0px; }
     .how-it-works .flex-container .items.t-step {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6))), url("../assets/img/Step3.png");
       background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("../assets/img/Step3.png"); }
@@ -362,37 +362,55 @@ a {
         display: inline-block;
         font-family: "Montserrat", sans-serif;
         font-weight: normal;
-        font-size: 10px;
-        padding: 4px 10px;
+        font-size: 0.625rem;
+        padding: 0.25rem 0.625rem;
         min-width: 70px;
         text-transform: uppercase; }
       .how-it-works .flex-container .items .content p {
         color: #E3E3E3;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 300;
-        margin: 0px; }
+        margin: 0; }
       .how-it-works .flex-container .items .content h3 {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 24px;
+        font-size: 1.5rem;
         color: #FFF;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 0.9375rem;
+        margin-bottom: 0.9375rem;
         line-height: 1.2; }
 
 .partners {
-  padding-top: 35px; }
+  padding-top: 2.1875rem; }
   .partners h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.375rem;
     text-align: center;
     color: #444;
-    margin-top: 0px;
-    margin-bottom: 15px; }
+    margin-top: 0;
+    margin-bottom: 0.9375rem; }
   .partners .flex-container .items {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     margin-bottom: 1rem; }
+    .partners .flex-container .items.first {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1; }
+    .partners .flex-container .items.second {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2; }
+    .partners .flex-container .items.third {
+      -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+      order: 3; }
+    .partners .flex-container .items.fourth {
+      -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+      order: 4; }
     .partners .flex-container .items:last-child {
       margin-bottom: 0; }
     .partners .flex-container .items img {
@@ -427,19 +445,19 @@ a {
       color: #666;
       font-weight: 300;
       margin: 0px;
-      font-size: 14px;
+      font-size: 0.875rem;
       text-align: center; }
       .partners .flex-container .items p.name {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
         color: #444;
-        margin-top: 17px;
-        margin-bottom: 12px; }
+        margin-top: 1.0625rem;
+        margin-bottom: 0.75rem; }
   .partners .btn {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 36px;
+    margin-top: 2.25rem;
     background-color: transparent;
     border: 2px solid #FF4E50;
     color: #FF4E50;
@@ -449,46 +467,99 @@ a {
       color: #FFF; }
 
 .activity-ideas {
-  padding-top: 35px; }
+  padding-top: 2.1875rem; }
   .activity-ideas h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.375rem;
     text-align: center;
     color: #444;
-    margin-top: 0px;
-    margin-bottom: 15px; }
+    margin-top: 0;
+    margin-bottom: 0.9375rem; }
   .activity-ideas .flex-container .items {
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 120px;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     border-radius: 4px; }
     .activity-ideas .flex-container .items .valign {
       position: relative;
       top: 50%;
+      -webkit-transform: translateY(-50%);
       transform: translateY(-50%); }
       .activity-ideas .flex-container .items .valign h2 {
         color: #FFF;
-        margin-bottom: 0px; }
+        margin-bottom: 0; }
     .activity-ideas .flex-container .items.sports {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../assets/img/Sports.png");
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Sports.png"); }
     .activity-ideas .flex-container .items.health {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../assets/img/Wellness.png");
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Wellness.png"); }
     .activity-ideas .flex-container .items.expeditions {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../assets/img/Extreme.png");
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Extreme.png"); }
     .activity-ideas .flex-container .items.games {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../assets/img/Games.png");
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Games.png"); }
     .activity-ideas .flex-container .items.culture {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../assets/img/Culture2.png");
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Culture2.png"); }
     .activity-ideas .flex-container .items.relaxation {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../assets/img/enjoymentRelaxation.png");
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/enjoymentRelaxation.png"); }
     .activity-ideas .flex-container .items.traveling {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../assets/img/Traveling.png");
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/img/Traveling.png"); }
   .activity-ideas .flex-container:last-child .items:last-child {
-    margin-bottom: 0px; }
+    margin-bottom: 0; }
+
+.holiday-interests {
+  padding-top: 2.1875rem;
+  padding-bottom: 2.1875rem; }
+  .holiday-interests h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.375rem;
+    text-align: center;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 0.625rem; }
+  .holiday-interests p {
+    color: #666;
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0.9375rem; }
+  .holiday-interests .flex-container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .holiday-interests .flex-container .form-container form {
+      text-align: center; }
+      .holiday-interests .flex-container .form-container form input {
+        font-size: 0.875rem;
+        font-weight: 300;
+        padding: 0.6875rem 0.9375rem;
+        min-width: 280px;
+        border: 1px solid #D4D4D4;
+        margin-bottom: 0.3125rem; }
+        .holiday-interests .flex-container .form-container form input::-webkit-input-placeholder {
+          color: #999999; }
+        .holiday-interests .flex-container .form-container form input:-moz-placeholder {
+          color: #999999; }
+        .holiday-interests .flex-container .form-container form input::-moz-placeholder {
+          color: #999999; }
+        .holiday-interests .flex-container .form-container form input:-ms-input-placeholder {
+          color: #999999; }
+      .holiday-interests .flex-container .form-container form .btn {
+        min-width: 280px;
+        margin-top: 0.3125rem; }
 
 @media (min-width: 768px) {
   .banner {
@@ -498,32 +569,34 @@ a {
       .banner .caption p {
         display: none; }
       .banner .caption h1 {
-        font-size: 52px; }
+        font-size: 3.25rem; }
       .banner .caption h2 {
-        font-size: 24px;
-        margin-bottom: 32px; }
+        font-size: 1.5rem;
+        margin-bottom: 2rem; }
       .banner .caption a {
         width: 225px; }
 
   .how-it-works {
-    padding-top: 95px; }
+    padding-top: 5.9375rem; }
     .how-it-works h2 {
-      margin-bottom: 34px; }
+      margin-bottom: 2.125rem; }
     .how-it-works .flex-container .items {
       height: 400px;
       background-position: center left; }
       .how-it-works .flex-container .items.s-step {
-        margin: 0px 20px; }
+        margin: 0 1.25rem; }
 
   .partners {
-    padding-top: 95px; }
+    padding-top: 5.9375rem; }
     .partners h2 {
-      margin-bottom: 34px; }
+      margin-bottom: 2.125rem; }
     .partners .flex-container {
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       max-width: 492px;
       margin: auto; }
       .partners .flex-container .items {
+        -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
         margin-bottom: 1rem;
         margin-left: 0.625rem;
@@ -540,10 +613,12 @@ a {
       width: 180px; }
 
   .activity-ideas {
-    padding-top: 95px; }
+    padding-top: 5.9375rem; }
     .activity-ideas h2 {
-      margin-bottom: 34px; }
+      margin-bottom: 2.125rem; }
     .activity-ideas .flex-container .items {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
       flex-grow: 1;
       height: 310px;
       max-width: 236px;
@@ -558,17 +633,50 @@ a {
       .activity-ideas .flex-container .items.culture, .activity-ideas .flex-container .items.relaxation {
         max-width: none; }
     .activity-ideas .flex-container:last-child .items {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+
+  .holiday-interests {
+    padding-top: 5.9375rem;
+    padding-bottom: 5.9375rem; }
+    .holiday-interests h2 {
+      margin-bottom: 2.75rem; }
+    .holiday-interests p {
+      margin-bottom: 1.5625rem; }
+    .holiday-interests .flex-container .form-container form input {
+      width: 300px;
+      margin-bottom: 0;
+      margin-right: 0.3125rem; }
+    .holiday-interests .flex-container .form-container form .btn {
+      min-width: 172px;
+      margin-top: 0;
+      margin-left: 0.3125rem; } }
 @media (min-width: 1200px) {
+  .banner .caption {
+    top: 175px; }
+    .banner .caption h1 {
+      margin-bottom: 120px; }
+    .banner .caption h2 {
+      display: none; }
+
   .how-it-works .items {
     background-position: center center; }
 
   .partners .flex-container {
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     max-width: none; }
     .partners .flex-container .items {
+      -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
       margin-bottom: 0; }
+      .partners .flex-container .items.second {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3; }
+      .partners .flex-container .items.third {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2; }
       .partners .flex-container .items:first-child {
         margin-left: 0; }
       .partners .flex-container .items:nth-child(2) {
