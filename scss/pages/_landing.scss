@@ -71,6 +71,10 @@
 .how-it-works {
     padding-top: 2.1875rem;
 
+    .fade {
+        opacity: 0;
+    }
+
     h2 {
         font-family: $secondary-font;
         font-weight: bold;
@@ -148,6 +152,28 @@
 
 .partners {
     padding-top: 2.1875rem;
+
+    .fade {
+        opacity: 0;
+        -webkit-transition-property: opacity, -webkit-transform;
+        transition-property: opacity, -webkit-transform;
+        transition-property: opacity, transform;
+        transition-property: opacity, transform, -webkit-transform;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+        &.first, &.third {
+            -webkit-transform: translate3d(-100px, 0, 0);
+            transform: translate3d(-100px, 0, 0);
+        }
+
+        &.second, &.fourth {
+            -webkit-transform: translate3d(100px, 0, 0);
+            transform: translate3d(100px, 0, 0);
+        }
+    }
 
     h2 {
         font-family: $secondary-font;

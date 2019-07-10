@@ -1,105 +1,3 @@
-.clearfix::after {
-    clear: both;
-    content: "";
-    display: table;
-}
-
-.hide-text {
-    overflow: hidden;
-    padding: 0;
-    text-indent: 101%;
-    white-space: nowrap;
-}
-
-.visually-hidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.link-center {
-    text-align: center;
-}
-
-.no-link {
-    cursor: default;
-    pointer-events: none;
-}
-
-.full-wd {
-    width: 100%;
-}
-
-.no-padding {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.text-white {
-    color: $white;
-}
-
-.bold-text {
-    font-weight: bold;
-}
-
-.no-break {
-    white-space: nowrap;
-}
-
-.b-left-progress-alert {
-    border-left: 5px solid #F6C23E;
-}
-
-.b-left-finish-alert {
-    border-left: 5px solid #1CC88A;
-}
-
-.b-left-expire-alert {
-    border-left: 5px solid #E74A3B;
-}
-
-.b-left-cancel-alert {
-    border-left: 5px solid #4E73DF;
-}
-
-.progress-alert {
-    background-color: #F6C23E;
-}
-
-.finish-alert {
-    background-color: #1CC88A;
-}
-
-.expire-alert {
-    background-color: #E74A3B;
-}
-
-.cancel-alert {
-    background-color: #4E73DF;
-}
-
-.type-alert-progress {
-    color: #F6C23E;
-}
-
-.type-alert-finish {
-    color: #1CC88A;
-}
-
-.type-alert-expire {
-    color: #E74A3B;
-}
-
-.type-alert-cancel {
-    color: #4E73DF;
-}
-
 @-webkit-keyframes growIn {
     0% {
         -webkit-transform: scale(.9);
@@ -123,6 +21,53 @@
         -webkit-transform: scale(1);
         transform: scale(1);
         opacity: 1
+    }
+}
+
+@-webkit-keyframes move {
+    0% {
+        opacity: 1;
+        left: -370px;
+    }
+    10% {
+        opacity: 1;
+        left: -333px;
+    }
+    20% {
+        opacity: 1;
+        left: -296px;
+    }
+    30% {
+        opacity: 1;
+        left: -259px;
+    }
+    40% {
+        opacity: 1;
+        left: -222px;
+    }
+    50% {
+        opacity: 1;
+        left: -185px;
+    }
+    60% {
+        opacity: 1;
+        left: -148px;
+    }
+    70% {
+        opacity: 1;
+        left: -111px;
+    }
+    80% {
+        opacity: 1;
+        left: -74px;
+    }
+    90% {
+        opacity: 1;
+        left: -37px;
+    }
+    100% {
+        opacity: 1;
+        left: 0px;
     }
 }
 
@@ -170,5 +115,23 @@
     100% {
         opacity: 1;
         left: 0px;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

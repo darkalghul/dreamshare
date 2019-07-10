@@ -57,86 +57,6 @@ a {
 @media (min-width: 1440px) {
   .container {
     max-width: 940px; } }
-.clearfix::after {
-  clear: both;
-  content: "";
-  display: table; }
-
-.hide-text {
-  overflow: hidden;
-  padding: 0;
-  text-indent: 101%;
-  white-space: nowrap; }
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-.link-center {
-  text-align: center; }
-
-.no-link {
-  cursor: default;
-  pointer-events: none; }
-
-.full-wd {
-  width: 100%; }
-
-.no-padding {
-  padding-left: 0;
-  padding-right: 0; }
-
-.text-white {
-  color: #FFF; }
-
-.bold-text {
-  font-weight: bold; }
-
-.no-break {
-  white-space: nowrap; }
-
-.b-left-progress-alert {
-  border-left: 5px solid #F6C23E; }
-
-.b-left-finish-alert {
-  border-left: 5px solid #1CC88A; }
-
-.b-left-expire-alert {
-  border-left: 5px solid #E74A3B; }
-
-.b-left-cancel-alert {
-  border-left: 5px solid #4E73DF; }
-
-.progress-alert {
-  background-color: #F6C23E; }
-
-.finish-alert {
-  background-color: #1CC88A; }
-
-.expire-alert {
-  background-color: #E74A3B; }
-
-.cancel-alert {
-  background-color: #4E73DF; }
-
-.type-alert-progress {
-  color: #F6C23E; }
-
-.type-alert-finish {
-  color: #1CC88A; }
-
-.type-alert-expire {
-  color: #E74A3B; }
-
-.type-alert-cancel {
-  color: #4E73DF; }
-
 @-webkit-keyframes growIn {
   0% {
     -webkit-transform: scale(0.9);
@@ -155,6 +75,40 @@ a {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1; } }
+@-webkit-keyframes move {
+  0% {
+    opacity: 1;
+    left: -370px; }
+  10% {
+    opacity: 1;
+    left: -333px; }
+  20% {
+    opacity: 1;
+    left: -296px; }
+  30% {
+    opacity: 1;
+    left: -259px; }
+  40% {
+    opacity: 1;
+    left: -222px; }
+  50% {
+    opacity: 1;
+    left: -185px; }
+  60% {
+    opacity: 1;
+    left: -148px; }
+  70% {
+    opacity: 1;
+    left: -111px; }
+  80% {
+    opacity: 1;
+    left: -74px; }
+  90% {
+    opacity: 1;
+    left: -37px; }
+  100% {
+    opacity: 1;
+    left: 0px; } }
 @keyframes move {
   0% {
     opacity: 1;
@@ -189,6 +143,16 @@ a {
   100% {
     opacity: 1;
     left: 0px; } }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .navbar {
   position: absolute;
   display: -webkit-box;
@@ -447,6 +411,8 @@ footer {
 
 .how-it-works {
   padding-top: 2.1875rem; }
+  .how-it-works .fade {
+    opacity: 0; }
   .how-it-works h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
@@ -504,6 +470,22 @@ footer {
 
 .partners {
   padding-top: 2.1875rem; }
+  .partners .fade {
+    opacity: 0;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+    .partners .fade.first, .partners .fade.third {
+      -webkit-transform: translate3d(-100px, 0, 0);
+      transform: translate3d(-100px, 0, 0); }
+    .partners .fade.second, .partners .fade.fourth {
+      -webkit-transform: translate3d(100px, 0, 0);
+      transform: translate3d(100px, 0, 0); }
   .partners h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
@@ -819,5 +801,52 @@ footer {
 
   .activity-ideas .flex-container .items {
     max-width: 300px; } }
+.how-it-works .fadeIn {
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
+  .how-it-works .fadeIn.f-step {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
+  .how-it-works .fadeIn.s-step {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s; }
+  .how-it-works .fadeIn.t-step {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s; }
+
+.partners .fadeIn {
+  opacity: 1; }
+  .partners .fadeIn.first {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; }
+  .partners .fadeIn.second {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s; }
+  .partners .fadeIn.third {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; }
+  .partners .fadeIn.fourth {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s; }
+
+@media (min-width: 1200px) {
+  .partners .fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; }
+  .partners .fadeIn.third {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s; } }
 
 /*# sourceMappingURL=main.css.map */
