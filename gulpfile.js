@@ -71,7 +71,7 @@ gulp.task("pages", function() {
 });
 
 // Clean output directory
-gulp.task("clean", () => del.sync(["dist"]));
+gulp.task("clean", () => del(["dist"]));
 
 // Gulp task to minify all files
 gulp.task(

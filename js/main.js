@@ -1,9 +1,9 @@
-let scroll = window.requestAnimationFrame ||
+var scroll = window.requestAnimationFrame ||
              function(callback) {
                  window.setTimeout(callback, 100/60)
              };
 
-let fadeInElements = document.querySelectorAll('.fade');
+var fadeInElements = document.querySelectorAll('.fade');
 
 function loopFade() {
     fadeInElements.forEach(function(element) {
@@ -17,7 +17,7 @@ function loopFade() {
 }
 
 function isElementInViewPort(el) {
-    let rect = el.getBoundingClientRect();
+    var rect = el.getBoundingClientRect();
     return (
         (rect.top <= 0 && rect.bottom >= 0) ||
         (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
