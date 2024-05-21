@@ -25,7 +25,7 @@
   "devDependencies": {
     "del": "^5.0.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
+    "gulp-autoprefixer": "^9.0.0",
     "gulp-csso": "^3.0.1",
     "gulp-sass": "^4.0.2",
     "gulp-terser": "^1.2.0",
